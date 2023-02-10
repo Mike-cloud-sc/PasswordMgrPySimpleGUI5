@@ -36,15 +36,15 @@ login_password_hash = '35f95f5551b94168e8cb7fb2c5adfa851e7476c1'  # Mike
 
 sg.theme('light green')
 
-# while True:
-#     password = sg.popup_get_text('Enter password)',   password_char='*', font=('Helvetica 16'))
-#     if password and PasswordMatches(password, login_password_hash):
-#         sg.Window('', [[sg.T('SUCCESS!!!')], [sg.T('Password Validated', font=('Helvetica 16'))],  [sg.OK(s=10), ]],  location=(1000, 90), disable_close=True).read(close=True)
-#         break
-#     else:
-#         answer = sg.popup_get_text('Password Failed, Do you want to try again? Y or N',  background_color='red', font=('Helvetica 16'), location=(1000, 90))
-#         if answer == 'n' or answer == 'N':
-#             exit()
+while True:
+    password = sg.popup_get_text('Enter password)',   password_char='*', font=('Helvetica 16'))
+    if password and PasswordMatches(password, login_password_hash):
+        sg.Window('', [[sg.T('SUCCESS!!!')], [sg.T('Password Validated', font=('Helvetica 16'))],  [sg.OK(s=10), ]],  location=(1000, 90), disable_close=True).read(close=True)
+        break
+    else:
+        answer = sg.popup_get_text('Password Failed, Do you want to try again? Y or N',  background_color='red', font=('Helvetica 16'), location=(1000, 90))
+        if answer == 'n' or answer == 'N':
+            exit()
 
 def search(search_arg):
     my_list1=[]
