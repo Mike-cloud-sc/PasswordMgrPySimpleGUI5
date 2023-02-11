@@ -39,7 +39,7 @@ sg.theme('light green')
 while True:
     password = sg.popup_get_text('Enter password)',   password_char='*', font=('Helvetica 16'))
     if password and PasswordMatches(password, login_password_hash):
-        sg.Window('', [[sg.T('SUCCESS!!!')], [sg.T('Password Validated', font=('Helvetica 16'))],  [sg.OK(s=10), ]],  location=(1000, 90), disable_close=True).read(close=True)
+        # sg.Window('', [[sg.T('SUCCESS!!!')], [sg.T('Password Validated', font=('Helvetica 16'))],  [sg.OK(s=10), ]],  location=(1000, 90), disable_close=True).read(close=True)
         break
     else:
         answer = sg.popup_get_text('Password Failed, Do you want to try again? Y or N',  background_color='red', font=('Helvetica 16'), location=(1000, 90))
